@@ -151,6 +151,15 @@ namespace backend.Controllers
         }
 
 
+        [HttpGet("getMax")]
+        public async Task<IActionResult> getMax()
+        {
+
+            var max = this.db.radnik.Max(e => e.Id);
+
+
+            return Ok(max);
+        }
 
 
 

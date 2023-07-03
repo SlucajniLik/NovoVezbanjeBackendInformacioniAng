@@ -37,6 +37,23 @@ namespace backend.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("posao");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Naziv = "a"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Naziv = "b"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Naziv = "c"
+                        });
                 });
 
             modelBuilder.Entity("backend.Modeli.Radnik", b =>
@@ -65,6 +82,32 @@ namespace backend.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("radnik");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            IdPosla = 1,
+                            Ime = "Radnik1",
+                            Lozinka = "1",
+                            Prezime = "pre1"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            IdPosla = 2,
+                            Ime = "Radnik2",
+                            Lozinka = "1",
+                            Prezime = "pre2"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            IdPosla = 3,
+                            Ime = "Radnik3",
+                            Lozinka = "1",
+                            Prezime = "pre3"
+                        });
                 });
 #pragma warning restore 612, 618
         }
